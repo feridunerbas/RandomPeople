@@ -1,0 +1,21 @@
+{
+    "mock" : {
+        "status": 200,
+        "method": "GET",
+        "urlPath": "/path",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}
+
+{
+    "data" : {
+        "user" : {
+            "id": "134543234343390403",
+            "name": "Feridun Erbas",
+            "email": "feridunerbas@gmail.com",
+            }
+        }
+    }
+}
