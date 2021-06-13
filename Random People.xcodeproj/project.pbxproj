@@ -23,6 +23,7 @@
 		863D56D9267638EE00FA55E4 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56D8267638EE00FA55E4 /* MockViewController.swift */; };
 		863D56DB26763A7700FA55E4 /* ApiMockerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56DA26763A7700FA55E4 /* ApiMockerOptions.swift */; };
 		863D56DD26763C3700FA55E4 /* MockBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56DC26763C3700FA55E4 /* MockBubbleView.swift */; };
+		869225322676B2F000F20FE7 /* MockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869225312676B2F000F20FE7 /* MockDetailViewController.swift */; };
 		8696DD552676761000289B4F /* MockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696DD542676761000289B4F /* MockListViewController.swift */; };
 		8696DD5826767A2100289B4F /* MockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696DD5726767A2100289B4F /* MockListViewModel.swift */; };
 		8696DD5A26767A3900289B4F /* MockListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696DD5926767A3900289B4F /* MockListItemCell.swift */; };
@@ -73,6 +74,7 @@
 		863D56D8267638EE00FA55E4 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
 		863D56DA26763A7700FA55E4 /* ApiMockerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMockerOptions.swift; sourceTree = "<group>"; };
 		863D56DC26763C3700FA55E4 /* MockBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBubbleView.swift; sourceTree = "<group>"; };
+		869225312676B2F000F20FE7 /* MockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailViewController.swift; sourceTree = "<group>"; };
 		8696DD542676761000289B4F /* MockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListViewController.swift; sourceTree = "<group>"; };
 		8696DD5726767A2100289B4F /* MockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListViewModel.swift; sourceTree = "<group>"; };
 		8696DD5926767A3900289B4F /* MockListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListItemCell.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				863D56DC26763C3700FA55E4 /* MockBubbleView.swift */,
 				8696DD542676761000289B4F /* MockListViewController.swift */,
 				8696DD5926767A3900289B4F /* MockListItemCell.swift */,
+				869225312676B2F000F20FE7 /* MockDetailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 			files = (
 				863D56D9267638EE00FA55E4 /* MockViewController.swift in Sources */,
 				86079978265A4D4400CD456A /* ViewController.swift in Sources */,
+				869225322676B2F000F20FE7 /* MockDetailViewController.swift in Sources */,
 				860799B7265A6B8600CD456A /* MockyJSON.swift in Sources */,
 				860799AD265A6A9100CD456A /* MockApiFileLoader.swift in Sources */,
 				8696DD5826767A2100289B4F /* MockListViewModel.swift in Sources */,

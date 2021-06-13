@@ -16,12 +16,17 @@ class MockListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(self.dismissButtonTapped))
     }
     
     private func setupTableView() {
         tableView.register(MockListItemCell.self, forCellReuseIdentifier: "MockListItemCell")
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    @objc func dismissButtonTapped() {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -56,4 +61,14 @@ extension MockListViewController: UITableViewDataSource {
 
 }
 
-extension MockListViewController: UITableViewDelegate {}
+extension MockListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let file = viewModel.files[indexPath.section].files[indexPath.row]
+        let vc = MockDetailViewController()
+        vc.viewModel = MockDetailViewModel(model: file)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+        
+}
