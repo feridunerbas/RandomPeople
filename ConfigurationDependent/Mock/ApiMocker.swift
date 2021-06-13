@@ -9,9 +9,25 @@ import OHHTTPStubs
 
 class ApiMocker {
     
-    let filesLoader = MockApiFilesLoader()
-        
-    func mockAPIs() {
+    // MARK: - Private Properties
+    private let filesLoader = MockApiFilesLoader()
+    private var mockWindow = MockWindow()
+    
+    // MARK: - Public Properties
+    open var options: ApiMockerOptions?
+    public static let shared = ApiMocker()
+    
+    // MARK: - Init
+    private init() {}
+    
+    
+    func start(withOptions: ApiMockerOptions? = nil) {
+        options = withOptions
+        mockAPIs()
+        showMockWindowIfNeeded()
+    }
+    
+    private func mockAPIs() {
         let files = filesLoader.loadApiFiles()
         files.forEach { model in
             let methodCondition =  model.mock.method?.testCondition ?? { _ in true }
@@ -20,6 +36,12 @@ class ApiMocker {
                 HTTPStubsResponse(fileAtPath: model.filePath, statusCode: model.mock.status ?? 200, headers: model.mock.headers).responseTime(0.5)
             }
         }
+    }
+    
+    private func showMockWindowIfNeeded() {
+        guard let options = options, options.mockWindowEnabled else { return }
+        mockWindow.rootViewController = MockViewController()
+        mockWindow.makeKeyAndVisible()
     }
 
 }

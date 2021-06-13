@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		86079974265A4D4400CD456A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079973265A4D4400CD456A /* AppDelegate.swift */; };
-		86079976265A4D4400CD456A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079975265A4D4400CD456A /* SceneDelegate.swift */; };
 		86079978265A4D4400CD456A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079977265A4D4400CD456A /* ViewController.swift */; };
-		8607997B265A4D4400CD456A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86079979265A4D4400CD456A /* Main.storyboard */; };
 		8607997D265A4D4500CD456A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8607997C265A4D4500CD456A /* Assets.xcassets */; };
 		86079980265A4D4500CD456A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8607997E265A4D4500CD456A /* LaunchScreen.storyboard */; };
 		8607998B265A4D4500CD456A /* Random_PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607998A265A4D4500CD456A /* Random_PeopleTests.swift */; };
@@ -22,6 +20,10 @@
 		860799BC265A965C00CD456A /* @Mock-auth-signup.json in Resources */ = {isa = PBXBuildFile; fileRef = 860799BB265A965C00CD456A /* @Mock-auth-signup.json */; };
 		860799BE265A996100CD456A /* @Mock-login.json in Resources */ = {isa = PBXBuildFile; fileRef = 860799BD265A996100CD456A /* @Mock-login.json */; };
 		860799C0265AB89300CD456A /* ApiMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860799BF265AB89300CD456A /* ApiMocker.swift */; };
+		863D56D7267638CF00FA55E4 /* MockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56D6267638CF00FA55E4 /* MockWindow.swift */; };
+		863D56D9267638EE00FA55E4 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56D8267638EE00FA55E4 /* MockViewController.swift */; };
+		863D56DB26763A7700FA55E4 /* ApiMockerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56DA26763A7700FA55E4 /* ApiMockerOptions.swift */; };
+		863D56DD26763C3700FA55E4 /* MockBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56DC26763C3700FA55E4 /* MockBubbleView.swift */; };
 		8D0047A6088D4790E816CED2 /* Pods_Random_People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D3CE2D3F40366A9B293402 /* Pods_Random_People.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +49,7 @@
 		66627D974A7B56C62F6CFA9A /* Pods-Random People.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Random People.mock.xcconfig"; path = "Target Support Files/Pods-Random People/Pods-Random People.mock.xcconfig"; sourceTree = "<group>"; };
 		86079970265A4D4400CD456A /* Random People.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random People.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86079973265A4D4400CD456A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86079975265A4D4400CD456A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		86079977265A4D4400CD456A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8607997A265A4D4400CD456A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8607997C265A4D4500CD456A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8607997F265A4D4500CD456A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86079981265A4D4500CD456A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +66,10 @@
 		860799BB265A965C00CD456A /* @Mock-auth-signup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-auth-signup.json"; sourceTree = "<group>"; };
 		860799BD265A996100CD456A /* @Mock-login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-login.json"; sourceTree = "<group>"; };
 		860799BF265AB89300CD456A /* ApiMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMocker.swift; sourceTree = "<group>"; };
+		863D56D6267638CF00FA55E4 /* MockWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWindow.swift; sourceTree = "<group>"; };
+		863D56D8267638EE00FA55E4 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
+		863D56DA26763A7700FA55E4 /* ApiMockerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMockerOptions.swift; sourceTree = "<group>"; };
+		863D56DC26763C3700FA55E4 /* MockBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBubbleView.swift; sourceTree = "<group>"; };
 		9633FB10B7407A1F3D8F5692 /* Pods-Random People.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Random People.debug.xcconfig"; path = "Target Support Files/Pods-Random People/Pods-Random People.debug.xcconfig"; sourceTree = "<group>"; };
 		C616C29C73050C771934AEED /* Pods-Random People.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Random People.release.xcconfig"; path = "Target Support Files/Pods-Random People/Pods-Random People.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,9 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				86079973265A4D4400CD456A /* AppDelegate.swift */,
-				86079975265A4D4400CD456A /* SceneDelegate.swift */,
 				86079977265A4D4400CD456A /* ViewController.swift */,
-				86079979265A4D4400CD456A /* Main.storyboard */,
 				8607997C265A4D4500CD456A /* Assets.xcassets */,
 				8607997E265A4D4500CD456A /* LaunchScreen.storyboard */,
 				86079981265A4D4500CD456A /* Info.plist */,
@@ -188,20 +190,21 @@
 		860799AA265A634D00CD456A /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				863D56D5267638C400FA55E4 /* View */,
 				860799C1265ABB3100CD456A /* Mocker */,
-				860799AB265A6A7500CD456A /* FileLoader */,
+				860799AB265A6A7500CD456A /* Resources */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
 		};
-		860799AB265A6A7500CD456A /* FileLoader */ = {
+		860799AB265A6A7500CD456A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				860799BA265A962400CD456A /* Mocks */,
 				860799B5265A6B7500CD456A /* Loader */,
 				860799B0265A6AC600CD456A /* Model */,
 			);
-			name = FileLoader;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		860799B0265A6AC600CD456A /* Model */ = {
@@ -210,6 +213,7 @@
 				860799B3265A6B6500CD456A /* ApiFile.swift */,
 				860799B6265A6B8600CD456A /* MockyJSON.swift */,
 				860799B8265A6B9400CD456A /* Mock.swift */,
+				863D56DA26763A7700FA55E4 /* ApiMockerOptions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -217,7 +221,6 @@
 		860799B5265A6B7500CD456A /* Loader */ = {
 			isa = PBXGroup;
 			children = (
-				860799AC265A6A9100CD456A /* MockApiFileLoader.swift */,
 			);
 			name = Loader;
 			sourceTree = "<group>";
@@ -235,8 +238,19 @@
 			isa = PBXGroup;
 			children = (
 				860799BF265AB89300CD456A /* ApiMocker.swift */,
+				860799AC265A6A9100CD456A /* MockApiFileLoader.swift */,
 			);
 			name = Mocker;
+			sourceTree = "<group>";
+		};
+		863D56D5267638C400FA55E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				863D56D6267638CF00FA55E4 /* MockWindow.swift */,
+				863D56D8267638EE00FA55E4 /* MockViewController.swift */,
+				863D56DC26763C3700FA55E4 /* MockBubbleView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		C229723CEBAE90246CAAE160 /* Frameworks */ = {
@@ -356,7 +370,6 @@
 				860799BE265A996100CD456A /* @Mock-login.json in Resources */,
 				86079980265A4D4500CD456A /* LaunchScreen.storyboard in Resources */,
 				8607997D265A4D4500CD456A /* Assets.xcassets in Resources */,
-				8607997B265A4D4400CD456A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,14 +436,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863D56D9267638EE00FA55E4 /* MockViewController.swift in Sources */,
 				86079978265A4D4400CD456A /* ViewController.swift in Sources */,
 				860799B7265A6B8600CD456A /* MockyJSON.swift in Sources */,
 				860799AD265A6A9100CD456A /* MockApiFileLoader.swift in Sources */,
 				860799B9265A6B9400CD456A /* Mock.swift in Sources */,
 				86079974265A4D4400CD456A /* AppDelegate.swift in Sources */,
+				863D56D7267638CF00FA55E4 /* MockWindow.swift in Sources */,
+				863D56DB26763A7700FA55E4 /* ApiMockerOptions.swift in Sources */,
+				863D56DD26763C3700FA55E4 /* MockBubbleView.swift in Sources */,
 				860799C0265AB89300CD456A /* ApiMocker.swift in Sources */,
 				860799B4265A6B6500CD456A /* ApiFile.swift in Sources */,
-				86079976265A4D4400CD456A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,14 +482,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		86079979265A4D4400CD456A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8607997A265A4D4400CD456A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8607997E265A4D4500CD456A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
