@@ -7,12 +7,22 @@
 
 import Foundation
 
+typealias ApiFilesDictionary = Dictionary<String, [ApiFile]>
+
 class MockApiFilesLoader {
     
-    func loadApiFiles() -> [ApiFile] {
+    func loadApiFiles() -> ApiFilesDictionary {
         let paths = Bundle.main.paths(forResourcesOfType: "json", inDirectory: "")
         let mockPaths = paths.filter { $0.components(separatedBy: "/").last?.hasPrefix("@Mock") == true }
-        return mockPaths.compactMap { generateModel(for: $0) }
+        let mockFiles = mockPaths.compactMap { generateModel(for: $0) }
+        var dictionary = ApiFilesDictionary()
+        mockFiles.forEach { file in
+            if dictionary[file.mock.urlPath] == nil {
+                dictionary[file.mock.urlPath] = []
+            }
+            dictionary[file.mock.urlPath]?.append(file)
+        }
+        return dictionary
     }
     
     private func generateModel(for path: String) -> ApiFile? {

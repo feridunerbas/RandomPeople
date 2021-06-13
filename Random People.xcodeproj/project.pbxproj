@@ -24,6 +24,10 @@
 		863D56DB26763A7700FA55E4 /* ApiMockerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56DA26763A7700FA55E4 /* ApiMockerOptions.swift */; };
 		863D56DD26763C3700FA55E4 /* MockBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D56DC26763C3700FA55E4 /* MockBubbleView.swift */; };
 		8696DD552676761000289B4F /* MockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696DD542676761000289B4F /* MockListViewController.swift */; };
+		8696DD5826767A2100289B4F /* MockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696DD5726767A2100289B4F /* MockListViewModel.swift */; };
+		8696DD5A26767A3900289B4F /* MockListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696DD5926767A3900289B4F /* MockListItemCell.swift */; };
+		8696DD5C26767A9800289B4F /* @Mock-login-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8696DD5B26767A9800289B4F /* @Mock-login-2.json */; };
+		8696DD6026767B6E00289B4F /* @Mock-all-internal-server-error.json in Resources */ = {isa = PBXBuildFile; fileRef = 8696DD5F26767B6E00289B4F /* @Mock-all-internal-server-error.json */; };
 		8D0047A6088D4790E816CED2 /* Pods_Random_People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D3CE2D3F40366A9B293402 /* Pods_Random_People.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,10 @@
 		863D56DA26763A7700FA55E4 /* ApiMockerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMockerOptions.swift; sourceTree = "<group>"; };
 		863D56DC26763C3700FA55E4 /* MockBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBubbleView.swift; sourceTree = "<group>"; };
 		8696DD542676761000289B4F /* MockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListViewController.swift; sourceTree = "<group>"; };
+		8696DD5726767A2100289B4F /* MockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListViewModel.swift; sourceTree = "<group>"; };
+		8696DD5926767A3900289B4F /* MockListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListItemCell.swift; sourceTree = "<group>"; };
+		8696DD5B26767A9800289B4F /* @Mock-login-2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-login-2.json"; sourceTree = "<group>"; };
+		8696DD5F26767B6E00289B4F /* @Mock-all-internal-server-error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-all-internal-server-error.json"; sourceTree = "<group>"; };
 		9633FB10B7407A1F3D8F5692 /* Pods-Random People.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Random People.debug.xcconfig"; path = "Target Support Files/Pods-Random People/Pods-Random People.debug.xcconfig"; sourceTree = "<group>"; };
 		C616C29C73050C771934AEED /* Pods-Random People.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Random People.release.xcconfig"; path = "Target Support Files/Pods-Random People/Pods-Random People.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +198,7 @@
 		860799AA265A634D00CD456A /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				8696DD5626767A1400289B4F /* ViewModel */,
 				863D56D5267638C400FA55E4 /* View */,
 				860799C1265ABB3100CD456A /* Mocker */,
 				860799AB265A6A7500CD456A /* Resources */,
@@ -229,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				860799BD265A996100CD456A /* @Mock-login.json */,
+				8696DD5B26767A9800289B4F /* @Mock-login-2.json */,
+				8696DD5F26767B6E00289B4F /* @Mock-all-internal-server-error.json */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -249,8 +260,17 @@
 				863D56D8267638EE00FA55E4 /* MockViewController.swift */,
 				863D56DC26763C3700FA55E4 /* MockBubbleView.swift */,
 				8696DD542676761000289B4F /* MockListViewController.swift */,
+				8696DD5926767A3900289B4F /* MockListItemCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		8696DD5626767A1400289B4F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8696DD5726767A2100289B4F /* MockListViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		C229723CEBAE90246CAAE160 /* Frameworks */ = {
@@ -367,6 +387,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				860799BE265A996100CD456A /* @Mock-login.json in Resources */,
+				8696DD6026767B6E00289B4F /* @Mock-all-internal-server-error.json in Resources */,
+				8696DD5C26767A9800289B4F /* @Mock-login-2.json in Resources */,
 				86079980265A4D4500CD456A /* LaunchScreen.storyboard in Resources */,
 				8607997D265A4D4500CD456A /* Assets.xcassets in Resources */,
 			);
@@ -439,7 +461,9 @@
 				86079978265A4D4400CD456A /* ViewController.swift in Sources */,
 				860799B7265A6B8600CD456A /* MockyJSON.swift in Sources */,
 				860799AD265A6A9100CD456A /* MockApiFileLoader.swift in Sources */,
+				8696DD5826767A2100289B4F /* MockListViewModel.swift in Sources */,
 				860799B9265A6B9400CD456A /* Mock.swift in Sources */,
+				8696DD5A26767A3900289B4F /* MockListItemCell.swift in Sources */,
 				86079974265A4D4400CD456A /* AppDelegate.swift in Sources */,
 				863D56D7267638CF00FA55E4 /* MockWindow.swift in Sources */,
 				863D56DB26763A7700FA55E4 /* ApiMockerOptions.swift in Sources */,

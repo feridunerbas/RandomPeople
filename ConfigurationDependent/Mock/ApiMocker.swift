@@ -12,7 +12,7 @@ class ApiMocker {
     // MARK: - Private Properties
     private let filesLoader = MockApiFilesLoader()
     private var mockWindow = MockWindow()
-    private(set) var files: [ApiFile] = []
+    private(set) var files: ApiFilesDictionary = [:]
     
     // MARK: - Public Properties
     open var options: ApiMockerOptions?
@@ -30,9 +30,9 @@ class ApiMocker {
     
     private func mockAPIs() {
         files = filesLoader.loadApiFiles()
-        files.forEach { model in
-            let methodCondition = model.mock.method?.testCondition ?? { _ in true }
-            let pathCondition = isPath(model.mock.urlPath)
+        files.values.flatMap { $0 }.forEach { (model) in
+            let methodCondition = model.mock.method?.methodAsTestCondition ?? { _ in true }
+            let pathCondition = model.mock.urlPath.urlPathAsTestCondition
             stub(condition: methodCondition&&pathCondition) { (request) -> HTTPStubsResponse in
                 HTTPStubsResponse(fileAtPath: model.filePath, statusCode: model.mock.status ?? 200, headers: model.mock.headers).responseTime(0.5)
             }
@@ -48,13 +48,23 @@ class ApiMocker {
 }
 
 private extension String {
-    var testCondition: HTTPStubsTestBlock? {
+    
+    var methodAsTestCondition: HTTPStubsTestBlock {
         switch self {
         case "GET": return isMethodGET()
         case "POST": return isMethodPOST()
         case "DELETE": return isMethodDELETE()
         case "PUT": return isMethodPUT()
-        default: return nil
+        default: return { _ in return true }
+        }
+    }
+    
+    var urlPathAsTestCondition: HTTPStubsTestBlock {
+        switch self {
+        case "*":
+            return { _ in return true }
+        default:
+            return isPath(self)
         }
     }
 }

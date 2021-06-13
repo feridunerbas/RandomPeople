@@ -1,0 +1,12 @@
+{
+    "mock" : {
+        "id": "InternalServerError",
+        "status": 500,
+        "method": "*",
+        "urlPath": "*"
+    },
+    "error" : {
+        "code" : 500,
+        "message": "Internal Server Error"
+    }
+}

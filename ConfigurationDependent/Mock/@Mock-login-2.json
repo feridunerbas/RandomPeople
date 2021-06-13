@@ -1,0 +1,12 @@
+{
+    "mock" : {
+        "id": "LoginFailed",
+        "status": 404,
+        "method": "GET",
+        "urlPath": "/login"
+    },
+    "error" : {
+        "code" : 404,
+        "message": "User not found"
+    }
+}

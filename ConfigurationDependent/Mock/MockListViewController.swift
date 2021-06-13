@@ -36,25 +36,24 @@ extension MockListViewController {
 
 extension MockListViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.files.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.files[section].files.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MockListItemCell", for: indexPath)
-        cell.textLabel?.text = viewModel.files[indexPath.row].mock.urlPath
+        cell.textLabel?.text = viewModel.files[indexPath.section].files[indexPath.row].mock.id
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        viewModel.files[section].title
     }
 
 }
 
 extension MockListViewController: UITableViewDelegate {}
-
-
-class MockListViewModel {
-    let files = ApiMocker.shared.files
-}
-
-class MockListItemCell: UITableViewCell {
-    
-}

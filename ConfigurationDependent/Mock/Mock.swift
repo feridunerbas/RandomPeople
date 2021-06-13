@@ -8,6 +8,7 @@
 import Foundation
 
 struct Mock: Decodable {
+    var id: String
     var status: Int32?
     var method: String?
     var headers: [String: String]?
