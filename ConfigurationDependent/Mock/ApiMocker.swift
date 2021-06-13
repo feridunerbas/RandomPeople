@@ -12,6 +12,7 @@ class ApiMocker {
     // MARK: - Private Properties
     private let filesLoader = MockApiFilesLoader()
     private var mockWindow = MockWindow()
+    private(set) var files: [ApiFile] = []
     
     // MARK: - Public Properties
     open var options: ApiMockerOptions?
@@ -28,9 +29,9 @@ class ApiMocker {
     }
     
     private func mockAPIs() {
-        let files = filesLoader.loadApiFiles()
+        files = filesLoader.loadApiFiles()
         files.forEach { model in
-            let methodCondition =  model.mock.method?.testCondition ?? { _ in true }
+            let methodCondition = model.mock.method?.testCondition ?? { _ in true }
             let pathCondition = isPath(model.mock.urlPath)
             stub(condition: methodCondition&&pathCondition) { (request) -> HTTPStubsResponse in
                 HTTPStubsResponse(fileAtPath: model.filePath, statusCode: model.mock.status ?? 200, headers: model.mock.headers).responseTime(0.5)

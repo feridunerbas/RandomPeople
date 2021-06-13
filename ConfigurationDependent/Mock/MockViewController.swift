@@ -22,8 +22,7 @@ class MockViewController: UIViewController {
     }
     
     @objc func bubbleTapped() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .brown
+        let vc = UINavigationController(rootViewController: MockListViewController())
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true, completion: nil)
     }
