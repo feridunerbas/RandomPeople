@@ -26,6 +26,11 @@ class MockViewController: UIViewController {
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true, completion: nil)
     }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let location = touches.first?.location(in: self.view) else { return }
+        bubbleView.frame.origin.x = min(max(0, location.x - 25), UIScreen.main.bounds.width - 25)
+        bubbleView.frame.origin.y = min(max(0, location.y - 25), UIScreen.main.bounds.height - 25)
+    }
     
 }
 
@@ -33,7 +38,7 @@ class MockViewController: UIViewController {
 extension MockViewController {
     private func makeBubbleView() -> MockBubbleView {
         let bubbleView = MockBubbleView(frame: CGRect(origin: .init(x: 0, y: 100), size: .init(width: 40, height: 40)))
-        bubbleView.backgroundColor = .blue
+        bubbleView.backgroundColor = UIColor.systemRed
         bubbleView.layer.cornerRadius = 20
         bubbleView.layer.masksToBounds = true
         view.addSubview(bubbleView)
