@@ -41,8 +41,7 @@ class ApiMocker {
     
     private func showMockWindowIfNeeded() {
         guard let options = options, options.mockWindowEnabled else { return }
-        mockWindow.rootViewController = MockViewController()
-        mockWindow.makeKeyAndVisible()
+        mockWindow.isHidden = false
     }
 
 }
